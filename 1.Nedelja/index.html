@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="main.css">
 <body>
-    <h1>Hello world</h1>
+   <!-- Main Header-->
+  <header class="mainHeader">
+    <div>
+     <nav>
+        <ul class="list-reset">
+          <li><a class="activeLink" href="#section1">ABOUT ME</a></li>
+          <li><a href="#section2">WORK</a></li>
+          <li><a href="#section3">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--Main Header END-->
+  <!-- Main -->
+  <main>
+    <!-- Container -->
+    <div class="container">
+      <!--AboutMe-container-->
+      <div class="aboutMeContainer" id="section1">
+        <div class="row">
+            <div class="col-2-3" >
+                <h2 class="myStoryTitle">MY STORY</h2>
+                <p class="aboutMeParagraf">Hi, my name is Nevena. After 7 years of working in so many different jobs, i fell in love with learning to code and design.<br><br>  I am a beginner, but willingness to learn and persistence are pushing me forward.<br><br>  With so many ideas in my head, you are the one who will help me to make them real,  to make your website.</p>
+            </div>
+            <div class="col-1-3">
+                <img class="imgFluid myPictureImg" src="img/me.jpg" alt="myPicture">
+            </div>
+        </div>
+      </div>
+      <!--AboutMe-container END-->
+      <!--Work-container-->
+      <div class="workContainer" id="section2">
+          <h2 class="myWorkTitle">MY WORK</h2>
+          <div class="row">
+            <div class="col-1-3">
+              <a class ="portfolioLink" href="https://github.com/ndjakovic19/IT-BootCamp-domaci/tree/main/1.Nedelja">
+                <img class="imgFluid portfolioImg " src="img/work.png" alt="Portfolio">www.projekat.com
+              </a>
+            </div>
+            <div class="col-1-3">
+               <a class ="portfolioLink" href="https://github.com/ndjakovic19/IT-BootCamp-domaci/tree/main/1.Nedelja">
+                <img class="imgFluid portfolioImg pink" src="img/work.png" alt="Portfolio">www.projekat.com
+              </a>
+            </div>
+            <div class="col-1-3">
+              <a class ="portfolioLink" href="https://github.com/ndjakovic19/IT-BootCamp-domaci/tree/main/1.Nedelja">
+               <img class="imgFluid portfolioImg yellow" src="img/work.png" alt="Portfolio">www.projekat.com
+              </a>
+            </div>
+          </div>
+        </div>
+       <!--Work-container END-->
+       <!-- Contact-container -->
+          <div class="contactContainer" id="section3">
+              <h2 class="contactTitle">CONTACT</h2>
+              <p>Text me on: +381 66 90 79 167 <br> Write on:  nevenakovacevic19@gmail.com</p>
+              <form action="#">
+                <input class="userName" type="text" placeholder="Username"><br><br>
+                <input class="userEmail" type="email"  placeholder="Email"><br><br>
+                <textarea class="userNameText"  placeholder="Your message"></textarea><br>
+                <input class="button" type="submit" value="SUBMIT">
+              </form>
+              <p>Follow me on Social:</p>
+          </div>
+       <!-- Contact-container END -->
+    </div>
+    <!-- Container END -->
+  </main>
+  <!-- Main END -->
+  <!--Main-Footer -->
+  <footer class="mainFooter">
+    <ul class="socNet list-reset">
+      <li><a href="https://www.linkedin.com/in/nevena-kovacevic-991484175/" target="_blank" class="ldLink">Linkedin</a></li>
+      <li><a href="https://www.facebook.com/nevena.kovacevic.311" target="_blank" class="fbLink">Facebook</a></li>
+    </ul>
+    <small>@Designed with passion by Nevena Đaković </small>
+  </footer>
+<!--Main-Footer END-->
 </body>
 </html>
