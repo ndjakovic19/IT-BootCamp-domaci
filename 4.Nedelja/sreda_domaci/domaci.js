@@ -68,4 +68,5 @@ console.log(sposobnostiPokemona(pokemoni));
 function brzina(niz){
 return niz.sort((a, b) => a.karakteristike.brzina - b.karakteristike.brzina)
 }
+
 console.log(brzina(pokemoni));

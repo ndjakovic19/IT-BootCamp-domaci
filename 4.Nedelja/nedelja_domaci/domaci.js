@@ -1,20 +1,105 @@
-// Направити функцију која прима низ покемона, пореди покемоне по јачини и враћа као победника оног који има највећу јачину напада.
+// 4.Zadatak
 
-// За дати html направити скрипту која:
+let pokemoni = [
+    {ime: 'Chikorita',
+     vrsta : 'Travnati',  
+     sposobnosti : ['Obaranje','Otrovni prah','Slatki miris'],
+     karakteristike:{
+        napad: 49,
+        odbrana:65,
+        brzina:45 
+        } 
+    },
+    {ime: 'Articuno',
+    vrsta : 'Ledeni',   
+    sposobnosti : ['Ledeni napadi','Čitač misli', 'Okretnost'],
+    karakteristike:{
+        napad: 85, 
+        odbrana:100,
+        brzina:85
+        }
+    },
+    {ime: 'Raichu',
+    vrsta : 'Elektricni',  
+    sposobnosti : ['Udar groma','Zamah repom','Brzi napad'],
+    karakteristike: {
+        napad: 90, 
+        odbrana:55,
+        brzina:100
+        }
+    },
+    {ime: 'Bulbasaur',
+    vrsta : 'Travnati',  
+    sposobnosti : ['Bujanje', 'Otrov','Evolucija'],
+    karakteristike: {
+        napad: 45, 
+        odbrana:65,
+        brzina:50
+        }
+    }
+]
 
-//     <div class="wrapper">
-// 		<button id="prikaz">PRIKAZI POKEMONE</button>
-// 		<button id="pobednik">PRIKAZI NAJJACEG POKEMONA</button>
-// 	</div>
-// *На клик на дугме прикажи покемоне приказује све покемоне из низа у формату :
+let napad 
 
-//     <div>
-//         <p>Opis pokemona</p>
-//         <img src="slika odgovarajućeg pokemona">
-//     </div>
-// *На клик на дугме прикажи најјачег покемона приказује покемона који има најјачи напад (користити већ написану функцију иѕ 4. задатка) по истом формату.
+function najjaciPokemon(niz){
+    napad = niz.sort((a, b) => b.karakteristike.napad - a.karakteristike.napad)
+    let najjaci = niz[0]
+    return najjaci
+}
+niz2 =[...pokemoni]
+console.log(najjaciPokemon(niz2))
 
-// На страници постоје 2 дугмета за наручивање (као на страници пицерије, ORDER) И постоје 2 дугмета за наручивање одмах
+// 5.Zadatak
 
-// 1.Дугмићи за 'наручивање' повећавају бројач
-// 2. Дугмићи за 'наручивање одмах' ресетују бројач на нула и исписују додатну поруку (Порука у облику: Наручили сте [X] пица, [ danasnji datum i vreme ]) Напомена: X је бројач, проверити да ли је бројач 0, и ако јесте кликом на наручивање одмах избацује одговарајућу поруку за грешку
+let btnPrikaz = document.querySelector('#prikaz')
+let btnPobednik = document.querySelector('#pobednik')
+let divWrapper = document.querySelector('.wrapper')
+let divPrikaz= document.querySelector('#divPrikaz')
+
+
+
+
+btnPrikaz.addEventListener('click',()=>{
+    divPrikaz.innerHTML = ""
+
+    pokemoni.forEach(el => {
+    const divPokemoni = document.createElement('div')
+    const paragrafOpis = document.createElement('p')
+    paragrafOpis.innerHTML = `  Ime : ${el.ime}<br>
+                                Vrsta :${el.vrsta}<br>
+                                Sposobnost :${el.sposobnosti}<br>
+                                Karakteristike: napad:${el.karakteristike.napad}
+                                                odbrana:${el.karakteristike.odbrana}
+                                                brzina:${el.karakteristike.brzina}
+    `
+    const img = document.createElement('img')
+    img.src =`${el.ime}.png`
+    divPokemoni.append(paragrafOpis,img)
+    divPrikaz.appendChild(divPokemoni)
+    })  
+
+})
+
+
+btnPobednik.addEventListener('click', ()=>{ 
+divPrikaz.innerHTML = ""
+let najjaci = najjaciPokemon(niz2)
+
+const divPokemoni = document.createElement('div')
+    const paragrafOpis = document.createElement('p')
+    paragrafOpis.innerHTML = `  Ime : ${najjaci.ime}<br>
+                                Vrsta :${najjaci.vrsta}<br>
+                                Sposobnost :${najjaci.sposobnosti}<br>
+                                Karakteristike: napad:${najjaci.karakteristike.napad}
+                                                odbrana:${najjaci.karakteristike.odbrana}
+                                                brzina:${najjaci.karakteristike.brzina}
+    `
+    const img = document.createElement('img')
+    img.src =`${najjaci.ime }.png`
+    divPokemoni.append(paragrafOpis,img)
+    divPrikaz.appendChild(divPokemoni)
+
+})
+
+
+
