@@ -1,0 +1,50 @@
+
+header{
+    background:black;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.div-launch{
+    border: 1px solid gray;
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    overflow: scrol;
+    word-wrap: break-word;   
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+.div-ship {
+    border: 1px solid gray;
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    height: 250px;
+    width: 250px;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+label{
+    color: #f1f1f1;
+}
+#select{
+ width: 200px;
+ outline-style: none;
+ border: none;
+ height: 30px;
+ background:rgb(131, 131, 127); 
+}
+
