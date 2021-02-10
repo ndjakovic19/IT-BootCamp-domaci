@@ -1,0 +1,28 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "text": "Tvrd je orah, voćka čudnovata",
+      "author": "P.P.Njegoš"
+    },
+    {
+      "text": "Čovek je ono u šta veruje",
+      "author": "Anton Čehov",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Pera",
+      "email": "peraperic@pera.com",
+      "password": "asdf1234"
+    },
+    {
+      "id": "8a1d5f50-6bdc-11eb-aa70-27f604d9363c",
+      "username": "Nevena",
+      "password": "Kovacevic123",
+      "email": "nndj2@gmail.com"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ const App = ()=> {
 
   const[launches,setLaunches] = useState([])
   const[company,setCompany] = useState([])
-  const[year,setYear] = useState('')
+  const[year,setYear] = useState(-1)
 
 
   useEffect(()=>{
@@ -23,8 +23,7 @@ const App = ()=> {
     <>
     <Header company = {company}/>
     <Select launches = {launches}  setYear = {setYear}/>
-    <Launches launches = {launches.filter(launch => launch.date_utc.startsWith(year))} />
-  
+    <Launches  launches = {year === -1 ? launches :launches.filter(launch => launch.date_utc.startsWith(year))} />
     </>
   )
 }

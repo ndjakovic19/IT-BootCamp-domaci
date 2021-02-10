@@ -6,7 +6,7 @@ const Select = ({launches,setYear}) => {
 
       <select onChange={(e)=>{
 
-          setYear(e.target.value)
+      setYear(e.target.value)
 
       }}>
         <option value = '-1' disabled hidden >Odaberi godinu</option> 
