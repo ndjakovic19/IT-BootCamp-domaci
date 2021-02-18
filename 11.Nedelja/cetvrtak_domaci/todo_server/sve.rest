@@ -1,0 +1,9 @@
+GET http://localhost:3005/todos/1
+###
+POST  http://localhost:3005/todos
+Content-Type: application/json
+
+{
+    "text": "neki tekst",
+    "done": "false"
+}
